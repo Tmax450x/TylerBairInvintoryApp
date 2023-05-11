@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="mainScreenPane" prefHeight="302.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.FXMLMainScreenController">
+   <children>
+      <Pane layoutX="14.0" layoutY="45.0" prefHeight="200.0" prefWidth="375.0" style="-fx-border-color: gray; -fx-border-radius: 5;">
+         <children>
+            <TableView fx:id="tableViewPart" layoutX="9.0" layoutY="46.0" prefHeight="109.0" prefWidth="358.0">
+              <columns>
+                <TableColumn fx:id="partId" prefWidth="54.0" text="Part Id" />
+                <TableColumn fx:id="partName" prefWidth="83.0" text="Part Name" />
+                <TableColumn fx:id="partInventoryLvl" prefWidth="104.0" text="Inventory Level" />
+                <TableColumn fx:id="partCostPerUnit" prefWidth="116.0" text="Price/Cost per Unit" />
+              </columns>
+              <items>
+        </items>
+            </TableView>
+            <Button layoutX="160.0" layoutY="14.0" mnemonicParsing="false" onAction="#onActionSearchPart" prefHeight="25.0" prefWidth="53.0" text="Search" />
+            <TextField fx:id="partsSearchTextbox" layoutX="217.0" layoutY="14.0" promptText="Id or Name" />
+            <Button layoutX="189.0" layoutY="164.0" mnemonicParsing="false" onAction="#onActionAddPart" prefHeight="25.0" prefWidth="53.0" text="Add" />
+            <Button fx:id="modPartBtn" layoutX="252.0" layoutY="164.0" mnemonicParsing="false" onAction="#onActionModPart" text="Modify" />
+            <Button layoutX="313.0" layoutY="164.0" mnemonicParsing="false" onAction="#onActionDeletePart" prefHeight="25.0" prefWidth="53.0" text="Delete" />
+            <Label layoutX="9.0" layoutY="16.0" text="Parts">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="411.0" layoutY="46.0" prefHeight="200.0" prefWidth="375.0" style="-fx-border-color: gray; -fx-border-radius: 5;" AnchorPane.topAnchor="46.0">
+         <children>
+            <TableView fx:id="tableViewProduct" layoutX="9.0" layoutY="46.0" prefHeight="109.0" prefWidth="358.0">
+               <columns>
+                  <TableColumn fx:id="productId" prefWidth="73.0" text="Product Id" />
+                  <TableColumn fx:id="productName" prefWidth="93.0" text="Product Name" />
+                  <TableColumn fx:id="productsInventoryLvl" prefWidth="101.0" text="Inventory Level" />
+                  <TableColumn fx:id="productCostPerUnit" prefWidth="90.0" text="Price per Unit" />
+               </columns>
+            </TableView>
+            <Button layoutX="160.0" layoutY="14.0" mnemonicParsing="false" onAction="#onActionSearchProduct" prefHeight="25.0" prefWidth="53.0" text="Search" />
+            <TextField fx:id="productsSearchTextbox" layoutX="218.0" layoutY="14.0" promptText="Id or Name" />
+            <Button layoutX="313.0" layoutY="164.0" mnemonicParsing="false" onAction="#onActionDeleteProduct" prefHeight="25.0" prefWidth="53.0" text="Delete" />
+            <Button layoutX="189.0" layoutY="164.0" mnemonicParsing="false" onAction="#onActionAddProduct" prefHeight="25.0" prefWidth="53.0" text="Add" />
+            <Button layoutX="252.0" layoutY="164.0" mnemonicParsing="false" onAction="#onActionModProduct" text="Modify" />
+            <Label layoutX="9.0" layoutY="16.0" text="Products">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Button layoutX="713.0" layoutY="255.0" mnemonicParsing="false" onAction="#onActionExit" prefHeight="25.0" prefWidth="73.0" text="Exit" />
+      <Label layoutX="11.0" layoutY="11.0" text="Tyler Bair's Inventory Managment System" />
+   </children>
+</AnchorPane>
